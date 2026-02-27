@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <h2>Dynamic CSS</h2>
+ 
+ 
+<div>
+    <p id="nameDate"></p>
+</div>
+ 
+    <div id="div">
+        DIV1
+ 
+    </div>
+    <div>
+       
+    <button onclick="changeColor(event)">RED</button>
+    <button onclick="changeColor(event)">YELLOW</button>
+</div>
+ 
+<div>
+    <div id="div2">
+        CSS DYNAMIC
+    </div>
+    <input type="number" id="height" placeholder="enter height">
+    <input type="number" id="width" placeholder="enter width">
+    <input type="color" name="color" id="color">
+    <input type="color" name="background" id="backgroundcolor">
+    <input type="number" id="fontsize" placeholder="enter fontsize">
+    <input type="number" id="raduis" placeholder="enter borderRadiss">
+    <button onclick="change()">ADD CSS</button>
+</div>
+ 
+ 
+<div id="paragraph" onmouseover="mouseover()" onmouseleave="mouseleave()">
+    My Name is Ananya Shukla. I am a Associate Software Engineer
+</div>
+ 
+ 
+<div >
+    <div class="progress">
+        <div class="progress-bar" id ="progressbar" ></div>
+      </div>
+     <input type="text" oninput="onChange()" id="progressbarinput">
+     
+</div>
+ <script src="dynamiccss.js"></script>
+</body>
+</html>
