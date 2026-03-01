@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>IF ELSE CONDITION</h1>
+    <div id="task1">
+        <input type="text" id="evenodd">
+        <button onclick="check()">Check</button>
+        <p id="output"></p>
+    </div>
+
+    <div id="task2">
+        <input type="text" id="number1">
+        <input type="text" id="number2">
+        <input type="text" id="number3">
+        <button type="button" onclick="findmax()">Find max</button>
+        <p id="max"></p>
+
+    </div>
+
+    <div id="task3">
+        <select name="caste" id="caste" onchange="handleCasteChange(event)">
+            <option value="sc">SC</option>
+            <option value="obc">OBC</option>
+            <option value="general">General</option>
+            <option value="other">Other</option>
+        </select>
+        <input type="text" id="selectedCaste" placeholder="Enter caste" style="display:none;">
+    </div>
+
+    <div id="task4">
+        <input type="text" id="height">
+        <input type="text" id="weight">
+        <button onclick="BMIcalulation()">Calculate BMI</button>
+        <p id="recommendation"></p>
+    </div>
+
+    <div id="task5">
+        <input type="number" id="purchaseamount" placeholder="Enter purchase amount">
+        <select name="c" id="customerType">
+            <option value="regular" id="regular">Regular</option>
+            <option value="premium" id="premium">Premium</option>
+            <option value="vip" id="vip">VIP</option>
+        </select>
+        <button onclick="get(event)">Check</button>
+        <p id="originalamount">Original Amount: -</p>
+        <p id="discount">Discount: -</p>
+        <p id="finalAmount">Final Amount: -</p>
+    </div>
+
+    <div id="task6">
+        <input type="number" id="number" onchange="onValueChnage()">
+        <p id="mssg"></p>
+
+    </div>
+    <script src="ifelse.js"></script>
+</body>
+
+</html>
