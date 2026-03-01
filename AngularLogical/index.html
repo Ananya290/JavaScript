@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="task1">
+    <div >
+    <button id="mobile"onclick="onbuttonSelect('mobile')">Mobile</button>
+    <button id="jioFibre"onclick="onbuttonSelect('jioFibre')">JioFibre</button>
+    <button id="business"onclick="onbuttonSelect('business')">Business</button>
+    </div>
+<p id="massage"></p>
+
+</div>
+
+<div id="task2">
+    <input type="radio" name="plan" value="Mobile Plan"> Mobile Plan
+    <input type="radio" name="plan" value="Fibre Optics"> Fibre Optics
+    <input type="radio" name="plan" value="Broadband"> Broadband
+    <input type="radio" name="plan" value="Business"> Business
+
+    <button onclick="onvalueSelect()">Continue</button>
+    <button onclick="resetPlan()">Reset</button>
+
+
+</div>
+    <script src="planSelection.js"></script>
+    
+</body>
+</html>
