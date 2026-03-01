@@ -29,8 +29,34 @@ function onbuttonSelect(value){
 
 // Selected Plan : ....
 
-function onvalueSelect(event){
-    v = event.target.value
-    console.log(v)
+function onvalueSelect(){
 
+    f = document.getElementsByName("plan")
+    selctedValue =""
+    
+
+    for(let plan of f){
+        if(plan.checked){
+            selctedValue = plan.value;
+            console.log(selctedValue)
+            break;
+       }
+    }
+
+ 
+
+    document.getElementById("plans").innerHTML = selctedValue
+
+}
+
+function onrest(){
+
+     f = document.getElementsByName("plan")
+    selctedValue =""
+    for(let plan of f){
+        if(plan.checked){
+            plan.checked =""
+            break;
+       }
+    }
 }
