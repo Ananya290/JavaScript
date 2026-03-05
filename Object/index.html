@@ -10,6 +10,63 @@
     <div class="task2">
         <p id="task2"></p>
     </div>
+    <div id="task4">
+        <select name="emp" id="emp" onchange="OnCHANGE(event)">
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+            <option value="d">D</option>
+            <option value="e">E</option>
+        </select>
+        <button onclick="clickkaro()">Assign</button>
+    </div>
+ 
+    <div id="task5">
+        <form onsubmit="savekaro(); return false;">
+             <input type="text" placeholder="Field name" id="name" >
+             <input type="text" placeholder="Field conatct" id="conatct" >
+             <input type="text" placeholder="Field dept" id="dept" >
+             <input type="text" placeholder="Field teamlead" id="teamlead" >
+             <input type="text" placeholder="Field tech" id="tech" >
+             <button type="reset" onclick="resetEmployee()" >Reset</button>
+             <button >Submit</button>
+             <button onclick="printEmp()">Print</button>
+<p id="display"></p>
+        </form>
+    </div>
+ 
+    <div id="task6">
+        <form onsubmit="saveProfile(); return false;">
+ 
+            <h3>Basic Info</h3>
+           
+            <input type="text" id="firstName" placeholder="First Name">
+            <input type="text" id="lastName" placeholder="Last Name">
+            <input type="text" id="email" placeholder="Email">
+            <input type="text" id="phone" placeholder="Phone">
+           
+            <h3>Address</h3>
+           
+            <input type="text" id="street" placeholder="Street">
+            <input type="text" id="city" placeholder="City">
+            <input type="text" id="state" placeholder="State">
+            <input type="text" id="pincode" placeholder="Pincode">
+           
+            <h3>Preferences</h3>
+            <input type="text" id="theme" placeholder="Theme">
+            <input type="text" id="language" placeholder="Language">
+            <input type="text" id="notifications" placeholder="Notifications">
+           
+            <button type="submit">Save</button>
+            <button type="button" onclick="viewProfile()">View Profile</button>
+            <button type="button" onclick="updateProfile()">Update Profile</button>
+            <button onreset="restProfile()">Clear ALL</button>
+ 
+           
+            </form>
+           
+            <p id="output"></p>
+    </div>
     <script src="object.js"></script>
 
 </body>
