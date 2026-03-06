@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+table, th, td{
+border:1px solid black;
+border-collapse: collapse;
+padding:8px;
+}
+</style>
 </head>
 <body>
     <h2>Object</h2>
@@ -66,6 +73,54 @@
             </form>
            
             <p id="output"></p>
+    </div>
+<br><br>
+    <div id="task7">
+<h2>TASK7</h2><br>
+<input type="text" id="search" placeholder="Search by title or author">
+<button onclick="searchBook()">Search</button>
+<input type="radio" id="check1" name ="check" value ="yes"placeholder="Search by Availablilty">YES
+<input type="radio" id="check2" name ="check" value ="no" placeholder="Search by Availablilty">NO
+<button onclick="showAvailable()">Available Books</button>
+<select id="genreFilter" onchange="filterGenre()">
+<option value="">Select Genre</option>
+<option value="Fiction">Fiction</option>
+<option value="Technology">Technology</option>
+<option value="History">History</option>
+</select>
+
+
+
+<h3>Add Book</h3>
+
+<input id="title" placeholder="Title">
+<input id="author" placeholder="Author">
+<input id="isbn" placeholder="ISBN">
+<input id="pages" placeholder="Pages">
+<input id="year" placeholder="Publish Year">
+<input id="genre" placeholder="Genre">
+
+<button onclick="addBook()">Add Book</button>
+
+<table id="bookTable">
+<thead>
+<tr>
+<th>Title</th>
+<th>Author</th>
+<th>ISBN</th>
+<th>Pages</th>
+<th>Year</th>
+<th>Genre</th>
+<th>Available</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+
     </div>
     <script src="object.js"></script>
 
