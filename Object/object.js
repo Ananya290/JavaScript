@@ -209,3 +209,91 @@ function updateProfile(){
         viewProfile()
        
         }
+
+// Task - Book Library Catalog
+// Create array of book objects:
+// {title, author, isbn, pages, publishYear, genre, available}
+// Create functions to:
+// Search book by title or author
+// Filter available books
+// Get books by genre
+// Add new book to catalog
+// Display results in a table with action buttons
+
+book = [
+    {title:"a", author:"a", isbn:"AA", pages:"12", publishYear:"AAAA", genre:"Fiction", available:"No"},
+    {title:"book3", author:"vaishnavi", isbn:"22", pages:"144", publishYear:"1999", genre:"History", available:"yes"},
+    {title:"bokk2", author:"ananya", isbn:"bb", pages:"123", publishYear:"2000", genre:"Technology", available:"yes"},
+    {title:"book3", author:"manya", isbn:"22", pages:"144", publishYear:"1999", genre:"History", available:"yes"}
+]
+
+function searchBook(){
+    titleboook = document.getElementById("search").value
+    console.log(titleboook)
+   SearchResult =  book.filter(m=>m.title == titleboook || m.author == titleboook)
+   console.log(SearchResult)
+}
+
+function showAvailable(){
+    availibility = document.getElementsByName("check").value
+   availableBook= book.filter(m=> m.available == 'yes')
+    console.log(availableBook)
+}
+
+function filterGenre(){
+   gen= document.getElementById("genreFilter").value
+    getBygenre = book.filter(m=> m.genre == gen)
+    console.log(getBygenre)
+}
+
+
+function addBook(){
+
+    
+  let title = document.getElementById("title").value;
+  let author = document.getElementById("author").value;
+  let isbn = document.getElementById("isbn").value;
+  let pages = document.getElementById("pages").value;
+  let year = document.getElementById("year").value;
+  let genre = document.getElementById("genre").value;
+
+  let bookADD = {
+    title: title,
+    author: author,
+    isbn: isbn,
+    pages: pages,
+    publishYear: year,
+    genre: genre,
+    available: true
+  };
+
+  book.push(bookADD);
+
+  console.log(book);
+  getBook()
+}
+
+function getBook(){
+
+    let table = document.getElementById("bookTable");
+table.innerHTML = "";
+
+book.forEach((book,index)=>{
+
+table.innerHTML += `
+
+<tr>
+<td>${book.title}</td>
+<td>${book.author}</td>
+<td>${book.isbn}</td>
+<td>${book.pages}</td>
+<td>${book.publishYear}</td>
+<td>${book.genre}</td>
+<td>${book.available ? "Yes" : "No"}</td>
+
+</tr>
+`;
+
+});
+}
+
